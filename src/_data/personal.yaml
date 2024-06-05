@@ -1,11 +1,8 @@
-email: hola@eyourmail.lol
+email: secretary@oceansidehall.com
 address: |-
-  Organization name
-  Your street
-  12345, city
-  Tel: +34 928231911
+  Oceanside Community Club
+  P.O. Box 329,
+  Oceanside, OR 97134
+  Tel: +1 503-568-7332
 platforms:
-  github: 'https://github.com/madrilene/eleventy-excellent'
-  mastodon: 'https://front-end.social/@lene'
-  bluesky: 'https://bsky.app/profile/lenesaile.com'
-  kofi: 'https://ko-fi.com/lenesaile'
+  github: 'https://github.com/OCC-Secretary/club-site'
