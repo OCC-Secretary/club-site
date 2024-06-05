@@ -1,8 +1,8 @@
 {
-  "name": "eleventy-excellent",
-  "version": "3.0.0",
-  "description": "Eleventy starter built around the workflow suggested by Andy Bell's buildexcellentwebsit.es.",
-  "author": "Lene Saile",
+  "name": "club-site",
+  "version": "0.1",
+  "description": "OCC website based on Eleventy Excellent starter kit",
+  "author": "OCC Secretary",
   "license": "ISC",
   "type": "module",
   "engines": {
@@ -21,7 +21,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/madrilene/eleventy-excellent.git"
+    "url": "https://github.com/OCC-Secretary/club-site.git"
   },
   "dependencies": {
     "@11ty/eleventy": "3.0.0-alpha.10",
