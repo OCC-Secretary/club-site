@@ -12,15 +12,15 @@
     },
     {
       "name": "Primary Highlight",
-      "value": "#dd4462"
+      "value": "#003366"
     },
     {
       "name": "Secondary Highlight",
-      "value": "#4467dd"
+      "value": "#996633"
     },
     {
       "name": "Tertiary Highlight",
-      "value": "#fbbe25"
+      "value": "#006600"
     }
   ]
 }
