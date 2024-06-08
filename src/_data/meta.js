@@ -20,8 +20,7 @@ export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon
 export const themeColor = '#DD4462'; //  Manifest: defines the default theme color for the application
 export const themeBgColor = '#FBFBFB'; // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
 export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
-export const opengraph_default_alt =
-  "The Oceanside Community Club"; // alt text for default meta image"
+export const opengraph_default_alt = "The Oceanside Community Club"; // alt text for default meta image"
 export const blog = {
   // RSS feed
   name: 'Oceanside Community Club News',
@@ -40,6 +39,14 @@ export const blog = {
   tagMore: 'More tags:',
   // pagination
   paginationLabel: 'Blog',
+  paginationPage: 'Page',
+  paginationPrevious: 'Previous',
+  paginationNext: 'Next',
+  paginationNumbers: true
+};
+export const features = {
+  // pagination
+  paginationLabel: 'Feature',
   paginationPage: 'Page',
   paginationPrevious: 'Previous',
   paginationNext: 'Next',
@@ -67,8 +74,8 @@ export const greenweb = {
   // this goes into src/common/greenweb.njk
   providers: {
     // if you want to add more than one, edit the array directly.
-    domain: 'netlify.com',
-    service: 'cdn'
+    domain: 'cloudflare.com',
+    service: 'shared-hosting'
   },
   credentials: {
     // optional, eg: 	{ domain='my-org.com', doctype = 'webpage', url = 'https://my-org.com/our-climate-record'}

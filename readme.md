@@ -25,8 +25,12 @@ Navigation:
 - Rental Information - renting
   - can we somehow get Pricing/availability; Rules/Policies; FAQ; as sub-parts of this? Or just have main Rental Info page with the price and availability, then have non-Nav pages of FAQ and Rules?
 - Features - features
-- News (blog)
+- News - blog
 
 Consider paginating a collection of 'feature' articles. These can just be single photos or multi-photo things like "the kitchen". Then have that collection shown as cards linking to full pages on a Features Page. Or just use JSON data?
+  It looks like this is easy, just:
+    - add/change something in collections.js
+    - create a new directory 'features' and add a features.json like the docs.json file
+    - each feature 
 
 
