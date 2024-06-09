@@ -32,5 +32,9 @@ Consider paginating a collection of 'feature' articles. These can just be single
     - add/change something in collections.js
     - create a new directory 'features' and add a features.json like the docs.json file
     - each feature 
+    - ... sort of working, but no CSS for some reason, and the cards show nothing
 
 
+## Contribute: TODO
+
+blog.njk has typo "webc:nkoeep"

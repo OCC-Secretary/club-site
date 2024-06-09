@@ -1,19 +1,15 @@
 export default {
   top: [
     {
-      text: 'About',
-      url: '/about/'
+      text: 'Rental Information',
+      url: '/renting/'
     },
     {
-      text: 'Docs',
-      url: '/get-started/'
+      text: 'Facility Features',
+      url: '/features/'
     },
     {
-      text: 'Built with',
-      url: '/built-with/'
-    },
-    {
-      text: 'Blog',
+      text: 'News',
       url: '/blog/'
     }
   ],
@@ -23,7 +19,7 @@ export default {
       url: '/styleguide/'
     },
     {
-      text: 'Imprint',
+      text: 'About',
       url: '/imprint/'
     },
     {

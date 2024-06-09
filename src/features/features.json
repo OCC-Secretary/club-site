@@ -1,0 +1,5 @@
+{
+  "tags": "features",
+  "layout": "post",
+  "permalink": "/features/{{ title | slugify }}/index.html"
+}

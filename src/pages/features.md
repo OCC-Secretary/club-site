@@ -1,8 +1,10 @@
 ---
 title: Facility Features
-permalink: /features/index.html
 description: 'Features and amenities of the Oceanside Community Club'
-layout: page
+layout: features
+pagination:
+  data: collections.onlyFeatures
+  size: 66
 ---
 
 The Oceanside Community Club’s location, scenic views, and affordable rates make using the building a great choice for your event.
