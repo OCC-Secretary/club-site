@@ -1,5 +1,5 @@
 {
-  "tags": "features",
-  "layout": "post",
+  "tags": "clubfeatures",
+  "layout": "page",
   "permalink": "/features/{{ title | slugify }}/index.html"
 }

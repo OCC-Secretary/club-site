@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+<!-- features layout TODO -->
 
 <article class="wrapper">
   <header class="full | section" style="--spot-color: var(--color-secondary)">
@@ -13,39 +14,18 @@ layout: base
 
   <div class="region flow prose" style="--region-space-top: var(--space-xl-2xl)">{{ content | safe }}</div>
 
-  <custom-masonry layout="50-50">
-    {% for item in pagination.items %}
+  <p>FEATURES!!</p>
+  
+  <ul >
+    <li>bogus item!</li>
+    <!-- loop features -->
+    {% set itemList = collections.clubfeatures %}
+    {% for item in itemList %}
       {% set definedDate = item.date %}
-
-      <custom-card clickable>
-        <h2 slot="headline">
+      <li>
           <a href="{{ item.url | url }}">{{ item.data.title }}</a>
-        </h2>
-        <span slot="date"> {% include "partials/date.njk" %} </span>
-        {%
-          if
-          item.data.tags.length > 1
-        %}
-          <div slot="tag" webc:nokeep>
-            {% for tag in item.data.tags %}
-              {% if tag != "features" %}
-                <span class="button post-tag">{{ tag }}</span>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-        <div slot="content" webc:nokeep>{{ item.data.description | markdownFormat | safe }}</div>
-      </custom-card>
+        <div >{{ item.data.description | markdownFormat | safe }}</div>
+      </li>
     {% endfor %}
-  </custom-masonry>
-
-  <!-- set collection to paginate -->
-  {% set collectionToPaginate = collections.features %}
-  <!-- set target pagination settings in meta.js -->
-  {% set metaKey = "features" %}
-  <!-- if the number of items in the collection is greater than the number of items shown on one page -->
-  {% if collectionToPaginate.length > pagination.size %}
-    <!-- include pagination -->
-    {% include 'partials/pagination.njk' %}
-  {% endif %}
+    </ul>
 </article>

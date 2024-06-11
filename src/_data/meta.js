@@ -44,14 +44,6 @@ export const blog = {
   paginationNext: 'Next',
   paginationNumbers: true
 };
-export const features = {
-  // pagination
-  paginationLabel: 'Feature',
-  paginationPage: 'Page',
-  paginationPrevious: 'Previous',
-  paginationNext: 'Next',
-  paginationNumbers: true
-};
 export const details = {
   aria: 'section controls',
   expand: 'expand all',
