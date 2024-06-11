@@ -28,11 +28,10 @@ Navigation:
 - News - blog
 
 Consider paginating a collection of 'feature' articles. These can just be single photos or multi-photo things like "the kitchen". Then have that collection shown as cards linking to full pages on a Features Page. Or just use JSON data?
-  It looks like this is easy, just:
-    - add/change something in collections.js
-    - create a new directory 'features' and add a features.json like the docs.json file
-    - each feature 
-    - ... sort of working, but no CSS for some reason, and the cards show nothing
+    - mostly working, but need a few things:
+    - get small image in card
+    - add a back arrow and "Features"? 
+    - use pagination on the individual feature pages (just fwd/back)
 
 
 ## Contribute: TODO

@@ -1,7 +1,6 @@
 ---
 layout: base
 ---
-<!-- features layout TODO -->
 
 <article class="wrapper">
   <header class="full | section" style="--spot-color: var(--color-secondary)">
@@ -14,7 +13,18 @@ layout: base
 
   <div class="region flow prose" style="--region-space-top: var(--space-xl-2xl)">{{ content | safe }}</div>
 
-  <p>FEATURES!!</p>
+  <custom-masonry layout="50-50">
+    {% for item in collections.clubfeatures %}
+      <custom-card clickable>
+        <h2 slot="headline">
+          <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+        </h2>
+        <div slot="content" webc:nokeep>{{ item.data.description | markdownFormat | safe }}</div>
+      </custom-card>
+    {% endfor %}
+  </custom-masonry>
+
+  <p>FEATURES TODO remove stuff below!!</p>
   
   <ul >
     <li>bogus item!</li>
