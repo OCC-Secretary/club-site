@@ -3,9 +3,9 @@ export const getAllPosts = collection => {
   return collection.getFilteredByGlob('./src/posts/**/*.md').reverse();
 };
 
-/** All markdown files as a collection for sitemap.xml */
-export const onlyMarkdown = collection => {
-  return collection.getFilteredByGlob('./src/**/*.md');
+/** All relevant pages as a collection for sitemap.xml */
+export const showInSitemap = collection => {
+  return collection.getFilteredByGlob('./src/**/*.{md,njk}');
 };
 
 /** All tags from all posts as a collection - excluding custom collections */

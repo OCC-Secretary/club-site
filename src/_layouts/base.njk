@@ -11,13 +11,11 @@
 
     <!-- 2 title -->
     <title>
-      {% if discover.title %}
-        {{ discover.title }}
-      {% elif title %}
-        {{ title }}
-      {% else %}
-        {{ meta.siteName }}
-      {% endif %}
+      {%- if title -%}
+        {{- title -}}
+      {%- else -%}
+        {{- meta.siteName -}}
+      {%- endif -%}
     </title>
 
     <base href="{{ page.url }}" />
@@ -35,18 +33,27 @@
     <!-- 6 preloads  -->
     {% include "head/preloads.njk" %}
 
-    <!-- 7 meta tags, icons, open graph etc.  -->
-    {% include "head/meta-info.njk" %}
-
-    <!-- 8 defer  -->
+    <!-- 7 defer  -->
     {% include "head/js-defer.njk" %}
+
+    <!-- 8 meta tags, icons, open graph etc.  -->
+    {% include "head/meta-info.njk" %}
   </head>
 
   <body class="{{ layout }}">
+    {% set indicateActiveHome %}
+      {% if page.url == "/" %}
+        aria-current=page
+      {% endif %}
+    {% endset %}
     {% include "partials/header.njk" %}
 
     <main id="main" class="flow">{{ content | safe }}</main>
 
     {% include "partials/footer.njk" %}
+    {%- if meta.easteregg -%}
+      <script type="module" src="/assets/scripts/components/custom-easteregg.js"></script>
+      <custom-easteregg></custom-easteregg>
+    {%- endif -%}
   </body>
 </html>

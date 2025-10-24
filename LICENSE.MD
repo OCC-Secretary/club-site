@@ -1,6 +1,6 @@
 ## Licenses
 
-This project is licensed under the ISC License. Additionally, it includes components that are licensed under the MIT License.
+This project is licensed under the ISC License. Additionally, it includes components that are licensed under the MIT and SIL License.
 
 ### ISC License
 
@@ -33,3 +33,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+### SIL OPEN FONT LICENSE
+
+The Fonts **Red Hat Display** and **Atkinson Hyperlegible** are licensed under the SIL License, Version 1.1.
+
+Copyright (c) Red Hat, Inc. and (c) Braille Institute.
+
+This license allows
+
+- Commercial use
+- Modifying
+- Redistribution
+- Full license: https://openfontlicense.org/

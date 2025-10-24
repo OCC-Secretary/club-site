@@ -9,6 +9,7 @@ import {tokensToTailwind} from './src/_config/utils/tokens-to-tailwind.js';
 
 // Raw design tokens
 import colorTokens from './src/_data/designTokens/colors.json';
+import borderRadiusTokens from './src/_data/designTokens/borderRadius.json';
 import fontTokens from './src/_data/designTokens/fonts.json';
 import spacingTokens from './src/_data/designTokens/spacing.json';
 import textSizeTokens from './src/_data/designTokens/textSizes.json';
@@ -18,10 +19,11 @@ import viewportTokens from './src/_data/designTokens/viewports.json';
 
 // Process design tokens
 const colors = tokensToTailwind(colorTokens.items);
+const borderRadius = tokensToTailwind(borderRadiusTokens.items);
 const fontFamily = tokensToTailwind(fontTokens.items);
 const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const fontWeight = tokensToTailwind(textWeightTokens.items);
-const fontLeading = tokensToTailwind(textLeadingTokens.items);
+const lineHeight = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
 export default {
@@ -32,14 +34,16 @@ export default {
       ltsm: {max: `${viewportTokens.sm}px`},
       sm: `${viewportTokens.sm}px`,
       md: `${viewportTokens.md}px`,
+      ltnavigation: {max: `${viewportTokens.navigation}px`},
       navigation: `${viewportTokens.navigation}px`
     },
     colors,
+    borderRadius,
     spacing,
     fontFamily,
     fontSize,
     fontWeight,
-    fontLeading,
+    lineHeight,
     backgroundColor: ({theme}) => theme('colors'),
     textColor: ({theme}) => theme('colors'),
     margin: ({theme}) => ({
@@ -92,9 +96,10 @@ export default {
 
       const groups = [
         {key: 'colors', prefix: 'color'},
+        {key: 'borderRadius', prefix: 'border-radius'},
         {key: 'spacing', prefix: 'space'},
         {key: 'fontSize', prefix: 'size'},
-        {key: 'fontLeading', prefix: 'leading'},
+        {key: 'lineHeight', prefix: 'leading'},
         {key: 'fontFamily', prefix: 'font'},
         {key: 'fontWeight', prefix: 'font'}
       ];
@@ -121,7 +126,8 @@ export default {
       const currentConfig = config();
       const customUtilities = [
         {key: 'spacing', prefix: 'flow-space', property: '--flow-space'},
-        {key: 'colors', prefix: 'spot-color', property: '--spot-color'}
+        {key: 'spacing', prefix: 'region-space', property: '--region-space'},
+        {key: 'spacing', prefix: 'gutter', property: '--gutter'}
       ];
 
       customUtilities.forEach(({key, prefix, property}) => {

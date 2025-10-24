@@ -1,6 +1,8 @@
 const storageKey = 'theme-preference';
-const lightLabel = '{{ meta.themeSwitch.light }}';
-const darkLabel = '{{ meta.themeSwitch.dark }}';
+const themeColors = {
+  dark: '{{ meta.themeLight }}',
+  light: '{{ meta.themeDark }}'
+};
 
 const theme = {
   value: getColorPreference()
@@ -16,6 +18,7 @@ window.onload = () => {
   }
 
   reflectPreference();
+  updateMetaThemeColor();
 
   lightThemeToggle.addEventListener('click', () => onClick('light'));
   darkThemeToggle.addEventListener('click', () => onClick('dark'));
@@ -28,6 +31,7 @@ window.onload = () => {
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches: isDark}) => {
   theme.value = isDark ? 'dark' : 'light';
   setPreference();
+  updateMetaThemeColor();
 });
 
 function onClick(themeValue) {
@@ -35,6 +39,7 @@ function onClick(themeValue) {
   document.querySelector('#light-theme-toggle').setAttribute('aria-pressed', themeValue === 'light');
   document.querySelector('#dark-theme-toggle').setAttribute('aria-pressed', themeValue === 'dark');
   setPreference();
+  updateMetaThemeColor();
 }
 
 function getColorPreference() {
@@ -48,12 +53,17 @@ function getColorPreference() {
 function setPreference() {
   localStorage.setItem(storageKey, theme.value);
   reflectPreference();
+  updateMetaThemeColor();
 }
 
 function reflectPreference() {
   document.firstElementChild.setAttribute('data-theme', theme.value);
-  document.querySelector('#light-theme-toggle')?.setAttribute('aria-label', lightLabel);
-  document.querySelector('#dark-theme-toggle')?.setAttribute('aria-label', darkLabel);
+}
+
+function updateMetaThemeColor() {
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  const newColor = theme.value === 'dark' ? themeColors.dark : themeColors.light;
+  metaThemeColor.setAttribute('content', newColor);
 }
 
 // set early so no page flashes / CSS is made aware

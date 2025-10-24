@@ -4,6 +4,7 @@ discover:
   title: Privacy Policy
 permalink: /privacy/index.html
 description: We respect the EU General Data Protection Regulation (GDPR). This policy document explains how the Club collects and handles any information you provide to us.
+date: "Last Modified"
 layout: page
 ---
 
@@ -32,3 +33,7 @@ If we change the content of this policy, those changes will be effective at the 
 
 **Complaints**
 If you have any reason to complain about the way we handle your privacy, please contact us by email: <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>.
+
+---
+
+*Last updated: {{ page.date | formatDate('MMMM D, YYYY') }}*
