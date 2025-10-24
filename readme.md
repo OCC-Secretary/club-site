@@ -33,6 +33,7 @@ Consider paginating a collection of 'feature' articles. These can just be single
     - add a back arrow and "Features"? 
     - use pagination on the individual feature pages (just fwd/back)
 
+501(c)4 is becoming the copyright symbol
 
 ## Contribute: TODO
 

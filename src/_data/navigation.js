@@ -30,5 +30,9 @@ export default {
       text: 'Accessibility',
       url: '/accessibility/'
     }
-  ]
+  ],
+  rentalHome: {
+    text: 'Rental Information',
+    url: '/renting/'
+  }
 };
